@@ -1,0 +1,216 @@
+@import "variables.scss";
+
+body{
+    @include padding(0);
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+// MOBILE FIRST 
+
+    header{
+        @include padding;
+        @include displayColumn;
+    }
+
+    .section1{
+        text-align: center;
+
+        &__localization{
+            @include shadowInset;
+            @include displayRow;
+            @include justifyContent;
+
+            background-color: lightgrey;
+
+            &--i{
+                margin-right : 4%
+            }
+        }
+
+        &__exploration{
+            @include displayRow;
+            @include justifyContent;
+
+            margin: 0 auto;
+            height: 300px;
+            background-color: $verylightgrey;
+            
+
+            &--div{
+                width: 80%;
+            }
+
+            &--margin-btm{
+                margin-bottom: 15%;
+            }
+            
+
+            &--btn-gradient{
+                @include padding(5%);
+                @include rounded($radius-35);
+                @include shadowOutset;
+                background-color: red;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .section2{
+        @include padding ;
+        &__card{
+            padding-left: 5%;
+            &--li{
+                list-style: none;
+                
+                a{
+                    
+                    @include rounded;
+                    @include displayRow;
+                    @include justifyContent(start);
+                    @include shadowOutset;
+                    @include padding(3%);
+                    margin: 4% 0;
+                    text-decoration: none;
+                    background-color: $verylightgrey;
+                    
+                    p{
+                        color: black;
+                        font-weight: 600;
+                    }
+                    
+                    
+                    span{
+                        @include rounded(50%);
+                        @include padding(3% 4%);
+                        background-color: $primaryColor;
+                        color: white;
+                        margin-left: -7%;
+                    }
+
+                    i{
+                        margin : 0 5%;
+                        color: gray;
+                    }
+                }
+                a:hover{
+                    background-color: lighten($color: $primaryColor, $amount: 35);
+                }
+               
+            }
+
+        }
+        
+    }
+
+    .section3{
+        @include padding ;
+        background-color: $verylightgrey;
+        &__card{
+            @include padding(0);
+    
+            &--li{
+                @include rounded;
+                @include shadowOutset;
+                background-color: white;
+                text-decoration: none;
+                margin: 4% 0;
+                list-style: none;
+               a{
+                    text-decoration: none;
+                    
+                    div{
+                        position: relative;
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                            height: 200px;
+                            border-top-left-radius: $radius-20;
+                            border-top-right-radius: $radius-20;
+                        }
+                        span.new{
+                            @include padding(3%);
+                            @include rounded($radius-3);
+                            @include shadowOutset($color :grey, $s1:1px, $s2 :0px ,$s3: 7px, $s4: 0px);
+
+                            color: darken($color: $thirdColor, $amount: 40);
+                            font-weight: 800;
+                            position: absolute;
+                            right: 25px;
+                            top: 10%;
+                            background-color: $thirdColor;
+                        }
+
+                       
+                    }
+                   
+                }
+            }
+            &--legend{
+                @include displayRow;
+                @include justifyContent(space-between);
+                @include padding(0 2% 2%) ;
+
+                p{
+                    font-weight: 700;
+                }
+                i{
+                    color: black;
+                }
+                i:hover{
+                    color: red; 
+                }
+            }
+        }
+        
+    }
+
+    footer{
+        @include padding(3% 5%);
+        background-color: lighten($color: #000000, $amount: 25);
+        
+        .footer-ul{
+            @include padding(0);
+            &__li{
+                list-style: none;
+                @include padding(1% 0);
+
+                &--a{
+                   text-decoration: none;
+                   color: white;
+                }
+            }
+            
+        }
+    }
+
+// Desktop 
+
+    @media screen and (min-width: 768px){
+        .section2__card{
+            @include displayRow;
+            @include justifyContent(space-between);
+
+            &--li{
+                width: 33%;
+           
+                a{
+                    margin: 0 3%;
+                }
+            }
+        }
+
+        .section3__card{
+            @include displayRow;
+            @include justifyContent(space-between);
+            flex-wrap: wrap;
+            
+            &--li{
+                width: 45%;
+            }
+        }
+    }
+    
+
+

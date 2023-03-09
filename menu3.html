@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood--A-La-Française</title>
     <!-- style -->
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/components/menu.css">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,10 @@
     <main>
         <section class="section1-title">
             <h1 class="section1-title--h1">A la française</h1>
-            <i class="section1-title--i fa-regular fa-heart fa-xl"></i>
+            <div class="heart">
+                <i class=" fa-regular fa-heart fa-xl heart--border "></i> 
+                <i class=" fa-solid fa-heart fa-xl heart--fill "></i>
+            </div>
         </section>
 
         <section class="section2-starter color-black">
@@ -47,11 +50,13 @@
             <ul class="section2-starter__ul">
                 <li>
                     <a href="" class="section2-starter__ul--a">
-                        <div>
-                            <p>Tartare de poulpe acidulé</p>
-                            <span>Aux zestes d'orange</span>
+                        <div class="text">
+                            <div class="text--para">
+                                <p>Tartare de poulpe acidulé</p>
+                                <span>Aux zestes d'orange</span>
+                            </div>
+                            <p>25€</p>
                         </div>
-                        <p>25€</p>
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>
@@ -59,11 +64,14 @@
                 </li>
                 <li>
                     <a href="" class="section2-starter__ul--a">
-                        <div>
-                            <p>Velouté de légumes d'antan</p>
-                            <span>Carotte, panais,topinambour</span>
-                        </div>
-                        <p>35€</p>
+                       <div class="text">
+                            <div class="text--para">
+                                <p>Velouté de légumes d'antan</p>
+                                <span>Carotte, panais,topinambour</span>
+                            </div>
+                            <p>35€</p>
+                       </div>
+                         
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>
@@ -71,11 +79,13 @@
                 </li>
                 <li>
                     <a href="" class="section2-starter__ul--a">
-                        <div>
-                            <p>Soupe à l'oignon</p>
-                            <span>Revisitée</span>
+                        <div class="text">
+                            <div class="text--para">
+                                <p>Soupe à l'oignon</p>
+                                <span>Revisitée</span>
+                            </div>
+                            <p>20€</p>
                         </div>
-                        <p>20€</p>
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>
@@ -89,11 +99,13 @@
             <ul class="section3-dish__ul">
                 <li>
                     <a href="" class="section3-dish__ul--a">
-                        <div>
-                            <p>Coquilles Saint-Jacques</p>
-                            <span>Accompagnée d'une purrée de panais</span>
+                        <div class="text">
+                            <div class="text--para">
+                                <p>Coquilles Saint-Jacques</p>
+                                <span>Accompagnée d'une purrée de panais</span>
+                            </div>
+                            <p>40€</p>
                         </div>
-                        <p>40€</p>
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>
@@ -101,11 +113,13 @@
                 </li>
                 <li>
                     <a href="" class="section3-dish__ul--a">
-                        <div>
-                            <p>Magret de Canard</p>
-                            <span>Et parmentier de pommes de terre</span>
+                        <div class="text">
+                            <div class="text--para">
+                                <p>Magret de Canard</p>
+                                <span>Et parmentier de pommes de terre</span>
+                            </div>
+                            <p>35€</p>
                         </div>
-                        <p>35€</p>
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>
@@ -113,11 +127,13 @@
                 </li>
                 <li>
                     <a href="" class="section3-dish__ul--a">
-                        <div>
-                            <p>Pigeonneau d'Ile-et-Vilaine</p>
-                            <span>Sur son lit de gnocchis aux légumes</span>
+                        <div class="text">
+                            <div class="text--para">
+                                <p>Pigeonneau d'Ile-et-Vilaine</p>
+                                <span>Sur son lit de gnocchis aux légumes</span>
+                            </div>
+                            <p>44€</p>
                         </div>
-                        <p>44€</p>
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>
@@ -131,11 +147,13 @@
             <ul class="section4-dessert__ul">
                 <li>
                     <a href="" class="section4-dessert__ul--a">
-                        <div>
+                       <div class="text">
+                        <div class="text--para">
                             <p>Pétales de violettes glacées</p>
                             <span>et purrée de noisettes</span>
                         </div>
                         <p>18€</p>
+                       </div>
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>
@@ -143,11 +161,13 @@
                 </li>
                 <li>
                     <a href="" class="section4-dessert__ul--a">
-                        <div>
-                            <p>Fondant au chocolat</p>
-                            <span>Revisité</span>
+                        <div class="text">
+                            <div class="text--para">
+                                <p>Fondant au chocolat</p>
+                                <span>Revisité</span>
+                            </div>
+                            <p>22€</p>
                         </div>
-                        <p>22€</p>
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>
@@ -155,11 +175,13 @@
                 </li>
                 <li>
                     <a href="" class="section4-dessert__ul--a">
-                        <div>
+                       <div class="text">
+                        <div class="text--para">
                             <p>Millefeuille croustillant</p>
                             <span>Myrtille et pâte d'amande</span>
                         </div>
                         <p>23€</p>
+                       </div>
                         <div class="displayBlock">
                             <i class="fa-regular fa-circle-check"></i>
                         </div>

@@ -1,0 +1,1 @@
+@keyframes loaded{0%{visibility:visible}100%{visibility:hidden}}@keyframes widthAnimation{0%{width:0px}100%{width:71px}}@keyframes turnAnimation{0%{transform:rotate(360deg)}100%{transform:rotate(0)}}@keyframes displayAnimation{0%{opacity:0}100%{opacity:1}}/*# sourceMappingURL=keyframes.css.map */

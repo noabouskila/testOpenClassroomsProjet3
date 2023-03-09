@@ -1,0 +1,212 @@
+@import "../utils/variables.scss";
+@import "../bases/bases.scss";
+@import "../layouts/layouts.scss";
+@import "../utils/keyframes.scss";
+
+body{
+    @include padding(0);
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+// MOBILE FIRST 
+
+    header{
+        @include padding;
+        @include displayColumn;
+    }
+
+    .loading-spinner{
+        animation: loaded 1s ease-in-out forwards;
+        position : fixed;
+        z-index : 10;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+        opacity: 1;
+        background-color: white;
+
+        i{
+            margin: auto;
+            font-size: xx-large;
+            color: $primaryColor;
+        }
+    }
+
+    .section1{
+        text-align: center;
+
+        &__localization{
+            @include shadowInset;
+            @include displayRow;
+            @include justifyContent;
+            background-color: lightgrey;
+            font-weight: 600;
+
+            &--i{
+                margin-right : 4%;
+            }
+        }
+
+        &__exploration{
+            @include displayColumn;
+            @include justifyContent;
+
+            padding: 1px 15%;
+            height: 300px;
+            background-color: $verylightgrey;
+            
+            &--btn-gradient{
+                @include padding(15px);
+                @include rounded($radius-35);
+                @include shadowOutset;
+                margin-top: 2%;
+                background-image: linear-gradient( $secondaryColor, $primaryColor);
+                text-decoration: none;
+                transition: 400ms;
+                
+                &:hover{
+                    filter: brightness(125%);
+                    @include shadowOutset($color :#717171, $s1:0px , $s2:5px , $s3:13px, $s4: 4px);
+
+                }
+            }
+        }
+    }
+
+    .section2{
+        @include padding ;
+        &__card{
+            padding-left: 5%;
+            &--li{
+                list-style: none;
+                
+                a{
+                    
+                    @include rounded;
+                    @include displayRow;
+                    @include justifyContent(start);
+                    @include shadowOutset;
+                    @include padding(3%);
+                    margin: 4% 0;
+                    text-decoration: none;
+                    background-color: $verylightgrey;
+                    
+                    p{
+                        color: black;
+                        font-weight: 600;
+                    }
+                    
+                    p:hover + i{
+                        color: red;
+                    }
+                    
+                    span{
+                        @include rounded(50%);
+                        @include padding(3% 4%);
+                        background-color: $primaryColor;
+                        color: white;
+                        margin-left: -7%;
+                    }
+
+                    i{
+                        margin : 0 5%;
+                        color: gray;
+                    }
+                }
+                a:hover{
+                    background-color: lighten($color: $primaryColor, $amount: 35);
+                }  
+            }
+        }
+    }
+
+    .section3{
+        @include padding ;
+        background-color: $verylightgrey;
+        &__card{
+            @include padding(0);
+    
+            &--li{
+                @include rounded;
+                @include shadowOutset;
+                background-color: white;
+                text-decoration: none;
+                margin: 4% 0;
+                list-style: none;
+               a{
+                    text-decoration: none;
+                    
+                    div{
+                        position: relative;
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                            height: 200px;
+                            border-top-left-radius: $radius-20;
+                            border-top-right-radius: $radius-20;
+                        }
+                        span.new{
+                            @include padding(12px);
+                            @include rounded($radius-3);
+                            @include shadowOutset($color :grey, $s1:1px, $s2 :0px ,$s3: 7px, $s4: 0px);
+
+                            color: darken($color: $thirdColor, $amount: 40);
+                            font-weight: 800;
+                            position: absolute;
+                            right: 25px;
+                            top: 10%;
+                            background-color: $thirdColor;
+                        }
+                    }
+                }
+            }
+
+            &--legend{
+                @include displayRow;
+                @include justifyContent(space-between);
+                @include padding(0 2% 2%) ;
+
+                p{
+                    font-weight: 700;
+                }
+            }
+        }
+        
+    }
+
+   
+
+// Desktop 
+
+    @media screen and (min-width: 768px){
+        .section2__card{
+            @include displayRow;
+            @include justifyContent(space-between);
+
+            &--li{
+                width: 33%;
+           
+                a{
+                    margin: 0 3%;
+                }
+            }
+        }
+
+        .section3__card{
+            @include displayRow;
+            @include justifyContent(space-between);
+            flex-wrap: wrap;
+            
+            &--li{
+                width: 45%;
+            }
+        }
+    }
+    
+
+

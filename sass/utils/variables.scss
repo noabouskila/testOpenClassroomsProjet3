@@ -1,0 +1,71 @@
+
+// VARIABLES 
+
+// couleurs
+$primaryColor : #9356DC ;
+$secondaryColor : #FF79DA;
+$thirdColor : #99E2D0 ;
+$verylightgrey :rgb(243, 242, 242);
+
+// border-radius
+$radius-3  : 3px ;
+$radius-20 : 20px;
+$radius-35 : 35px;
+$radius-40 : 40px;
+
+
+// justify-content
+$center : center;
+$spce-btween : space-between ;
+
+
+$colorstxt:(
+    black : black,
+    white : white,
+);
+
+
+
+// MIXINS
+
+@mixin displayColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+@mixin displayRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@mixin justifyContent($justify : $center){
+    justify-content: $justify;
+}
+@mixin rounded($radius : $radius-20){
+    border-radius: $radius;
+}
+@mixin shadowInset{
+    box-shadow :  inset gray 0px 5px 7px -5px;
+}
+@mixin shadowOutset($color : lightgrey , $s1 : 0px , $s2 : 5px ,$s3 : 8px ,$s4 :1px ){
+    box-shadow : $color $s1 $s2 $s3 $s4; 
+}
+@mixin padding($pad : 4%){
+    padding: $pad;
+}
+@mixin ellipsis{
+    white-space: nowrap;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+// BOUCLES
+
+// colorstxt
+@each $color, $c in $colorstxt {
+    .color-#{$color} {
+       color : $c;
+    }
+}

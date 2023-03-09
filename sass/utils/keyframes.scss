@@ -1,0 +1,54 @@
+
+// MAIN
+
+// si on n'utilise pas lanimation de font awesome : 
+
+// @keyframes spin {
+//     0% { transform: rotate(0deg); }
+//     100% { transform: rotate(360deg); }
+// }
+
+// disparition du loading-spinner
+@keyframes loaded {
+    0% {
+    visibility: visible;
+    
+    }
+    100% {
+    visibility: hidden;
+    }
+}
+
+// MENU
+
+// width de la checkanimation 
+@keyframes widthAnimation {
+    0%{
+        width: 0px;
+    }
+
+    100%{
+        width: 71px;
+     
+    }
+}
+
+// rotate de la check animatio 
+@keyframes turnAnimation{
+    0%{
+        transform: rotate(360deg)
+    }
+
+    100%{
+        transform: rotate(0)
+    }
+}
+
+@keyframes displayAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

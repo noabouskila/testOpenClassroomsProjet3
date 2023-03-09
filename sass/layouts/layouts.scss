@@ -14,20 +14,24 @@
 
     .heart--border{
         color: black;
-        z-index: 50;
+        z-index: 150;
         position: relative;
+
+        // pour que ce soit cliquable sur tout le coeur (je cherche un autre moyen)
+        // height: 11px;
+        // padding-top: 10px;
+        // background : pink ;  // juste pour tester
     }
 
     .heart--border:hover+.heart--fill{
         visibility: visible;
-        cursor: pointer;
         z-index: 100;
-        animation: likeAnimation 3s ease-in-out;
+        animation: likeAnimation 1s ease-in-out;
     }
 
     .heart--border:hover{
        color: transparent;
-       transition: color 3s;
+       transition: color 1s;
     }
 }
 

@@ -13,7 +13,7 @@ body{
 // MOBILE FIRST 
 
     header{
-        @include padding;
+        @include padding(25px);
         @include displayColumn;
     }
 
@@ -48,7 +48,7 @@ body{
             font-weight: 600;
 
             &--i{
-                margin-right : 4%;
+                margin-right :25px;
             }
         }
 

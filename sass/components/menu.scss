@@ -8,7 +8,7 @@
 .header{
     &__nav{
         @include displayRow; 
-        @include padding(4%);
+        @include padding(25px);
         svg{
             margin : 0 auto;
         }
@@ -166,6 +166,13 @@ main{
 
 
 @media screen and (min-width: 768px){
+
+    .header {
+        &--img{
+            height: 425px;
+        }
+    }
+
     .section2-starter , .section3-dish, .section4-dessert{
 
         &__ul{

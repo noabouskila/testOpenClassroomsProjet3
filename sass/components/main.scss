@@ -18,7 +18,7 @@ body{
     }
 
     .loading-spinner{
-        animation: loaded 1s ease-in-out forwards;
+        animation: loaded 2s ease-in-out forwards;
         position : fixed;
         z-index : 10;
         display: flex;
@@ -117,10 +117,17 @@ body{
                         margin : 0 5%;
                         color: gray;
                     }
+
+                    &:hover{
+                        background-color: lighten($color: $primaryColor, $amount: 35);
+                    } 
+                    
+                    &:hover i{
+                        color:$primaryColor;
+                    } 
                 }
-                a:hover{
-                    background-color: lighten($color: $primaryColor, $amount: 35);
-                }  
+               
+                
             }
         }
     }

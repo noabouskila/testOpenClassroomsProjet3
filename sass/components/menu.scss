@@ -72,7 +72,7 @@ main{
 .section2-starter{
     &__ul{
         &--a{
-            animation: displayAnimation 3s ease-in-out;
+            animation: displayAnimation 2s ease-in-out;
         }
     }
 } 
@@ -80,7 +80,7 @@ main{
 .section3-dish{
     &__ul{
         &--a{
-            animation: displayAnimation 6s ease-in-out;
+            animation: displayAnimation 4s ease-in-out;
         }
     }
 }
@@ -88,7 +88,7 @@ main{
 .section4-dessert{
     &__ul{
         &--a{
-            animation: displayAnimation 9s ease-in-out;
+            animation: displayAnimation 6s ease-in-out;
         }
     }
 }
@@ -139,27 +139,48 @@ main{
                 &--para{
                     @include ellipsis;
                    
-                }
+                } 
+            }      
+            
+            // afficher le check
+            &:hover .displayBlock{
+                @include rounded( 0  $radius-20  $radius-20  0);
+                background-color: $thirdColor ;
+                color:  white;
+                animation: widthAnimation 500ms ease-in;
+                animation-fill-mode: forwards;
+                align-items: center;
+                justify-content: center;
+                height: 85px;                   
+                border: none;
+                display: flex;
 
-                // afficher le check
-                &:hover + .displayBlock{
-                    @include rounded( 0  $radius-20  $radius-20  0);
-                    background-color: $thirdColor ;
-                    color:  white;
-                    animation: widthAnimation 500ms ease-in;
+                i{
+                    animation: turnAnimation 500ms ease-in;
                     animation-fill-mode: forwards;
-                    align-items: center;
-                    justify-content: center;
-                    height: 85px;                   
-                    border: none;
-                    display: flex;
-
-                    i{
-                        animation: turnAnimation 500ms ease-in;
-                        animation-fill-mode: forwards;
-                    }
                 }
-            }       
+            }
+
+            &:not(:hover) .displayBlock{
+                @include rounded( 0  $radius-20  $radius-20  0);
+                background-color: $thirdColor ;
+                color:  white;
+                animation: invWidthAnimation 500ms ease-in;
+                animation-fill-mode: forwards;
+                align-items: center;
+                justify-content: center;
+                height: 85px;                  
+                border: none;
+                display: flex;
+                
+                i{
+
+                    animation: invTurnAnimation 500ms ease-in;
+                    animation-fill-mode: forwards;
+
+                }
+
+            }
         }
     }
 }

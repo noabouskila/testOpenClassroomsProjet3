@@ -33,7 +33,21 @@
     }
 }
 
-// rotate de la check animatio 
+// inverse 
+@keyframes invWidthAnimation {
+    0%{
+        width: 71px;
+    }
+
+    100%{
+        width: 0px;
+     
+    }
+}
+
+
+
+// rotate de la check animation
 @keyframes turnAnimation{
     0%{
         transform: rotate(360deg)
@@ -44,6 +58,19 @@
     }
 }
 
+// inverse
+@keyframes invTurnAnimation{
+    0%{
+        transform: rotate(-360deg)
+    }
+
+    100%{
+        transform: rotate(0)
+    }
+}
+
+
+// affichage des menus avec un décalage dans le temps
 @keyframes displayAnimation {
     0% {
         opacity: 0;

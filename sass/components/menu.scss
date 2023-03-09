@@ -134,11 +134,9 @@ main{
                
                 p{
                     font-weight: 600;
-                    @include ellipsis;
                 }
                 &--para{
-                    @include ellipsis;
-                   
+                    @include ellipsis; 
                 } 
             }      
             

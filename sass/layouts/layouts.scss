@@ -1,4 +1,4 @@
-
+@import "../utils/keyframes.scss";
 // gestion du like
 .heart{
     position: relative;
@@ -16,17 +16,12 @@
         color: black;
         z-index: 150;
         position: relative;
-
-        // pour que ce soit cliquable sur tout le coeur (je cherche un autre moyen)
-        // height: 11px;
-        // padding-top: 10px;
-        // background : pink ;  // juste pour tester
     }
 
     .heart--border:hover+.heart--fill{
         visibility: visible;
         z-index: 100;
-        animation: likeAnimation 1s ease-in-out;
+        animation: displayAnimation 1s ease-in-out;
     }
 
     .heart--border:hover{
@@ -36,14 +31,7 @@
 }
 
 
-@keyframes likeAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+
 
 
 // footer

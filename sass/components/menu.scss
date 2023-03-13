@@ -128,16 +128,18 @@ main{
                 @include padding(7px 12px);
                 @include displayRow;
                 @include justifyContent(space-between);
-                @include ellipsis;
+                @include ellipsis; 
                 align-items: flex-end ;
                 width: 100%;
+
+                &--para , .ellipsis{
+                    @include ellipsis; 
+                } 
                
                 p{
                     font-weight: 600;
                 }
-                &--para{
-                    @include ellipsis; 
-                } 
+               
             }      
             
             // afficher le check

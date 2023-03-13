@@ -65,7 +65,7 @@ $colorstxt:(
 
 // colorstxt
 @each $color, $c in $colorstxt {
-    .color-#{$color} {
+    #{'.color-'+$color} {
        color : $c;
     }
 }

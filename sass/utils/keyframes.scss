@@ -8,6 +8,7 @@
 //     100% { transform: rotate(360deg); }
 // }
 
+
 // disparition du loading-spinner
 @keyframes loaded {
     0% {
@@ -70,7 +71,7 @@
 }
 
 
-// affichage des menus avec un décalage dans le temps
+// affichage des MENUS avec un décalage dans le temps + des LIKES
 @keyframes displayAnimation {
     0% {
         opacity: 0;
